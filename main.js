@@ -18,5 +18,17 @@ fetch(apiUrl)
     const productContainer = document.getElementById('product-container');
     productContainer.innerHTML = '<p> failed to load, try again. </p>'
 });
-
-fetchProducts();
+//Format product information dynamically.
+function displayProducts(products) {
+    const productContainer = document.getElementById('product-container');
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
+            <h2>${product.name}</h2>
+            <p>Company: ${product.company}</p>
+            <p>Price: $${product.price}</p>
+            <img src="${product.image}" alt="${product.name}" />
+        `;
+        productContainer.appendChild(productDiv);
+    });
+}
