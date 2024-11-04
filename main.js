@@ -31,10 +31,10 @@ function displayProducts(products) {
 
         // Set the inner HTML of the product div
         productDiv.innerHTML = `
-            <h2>${product.name}</h2>                  <!-- Product Name -->
-            <p>Company: ${product.company}</p>        <!-- Company Name -->
-            <p>Price: $${product.price}</p>            <!-- Product Price -->
-            <img src="${product.image}" alt="${product.name}" /> <!-- Product Image -->
+            <h2>${product.name}</h2>                 
+            <p>Company: ${product.company}</p>        
+            <p>Price: $${product.price}</p>            
+            <img src="${product.image}" />
         `;
 
         // Add the product div to the container
